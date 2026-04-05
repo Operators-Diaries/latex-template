@@ -1,6 +1,6 @@
 .vscode/
 
-# Compilattion
+# Compilation
 tstex_modules/
 main.aux
 main.fdb_latexmk
@@ -8,3 +8,5 @@ main.fls
 main.log
 main.pdf
 main.synctex.gz
+main.bbl
+main.blg
