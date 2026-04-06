@@ -1,32 +1,35 @@
 \documentclass{article}
-\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[a4paper, top=2cm, bottom=4cm, left=2cm, right=2cm]{geometry}
 \usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{caption}
 
 \title{LaTeX Template Example}
 \author{Annhilati}
 \date{2026}
 
-\hyphenation{op-tical net-works semi-conduc-tor}
+\hyphenation{} % z.B. \hyphenation{op-tical} %
+\bibliographystyle{acm}
 
+
+% //======// Document //=====================================================================// %
 
 \begin{document}
 
 \maketitle
 
 \begin{multicols}{2}
-Text in zwei Spalten
-Text in zwei Spalten
-Text in zwei Spalten
-Text in zwei Spalten
-Text in zwei Spalten
-Text in zwei Spalten
-Text in zwei Spalten
-\end{multicols}
-
 
 \input{chapters/introduction}
 
+\begin{center}
+  \includegraphics[width=0.6\columnwidth]{figures/SL.jpg}
+  \captionof{figure}{Beschreibung des Bildes}
+  \label{fig:SL}
+\end{center}
+
+\end{multicols}
+
 \bibliography{references}
-\bibliographystyle{plain}
 
 \end{document}
