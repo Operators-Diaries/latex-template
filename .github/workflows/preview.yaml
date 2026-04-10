@@ -1,4 +1,4 @@
-name: Deploy LaTeX PDF Preview
+name: Deploy PDF Preview
 
 on:
   push:
@@ -11,21 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Repository auschecken
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: LaTeX kompilieren
+      - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
 
-      - name: Output vorbereiten
+      - name: Prepare Output
         run: |
           mkdir public
           cp main.pdf public/index.pdf
           cp .github/workflows/preview.html public/index.html
 
-      - name: Pages Artifact hochladen
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
@@ -38,5 +38,5 @@ jobs:
       id-token: write
 
     steps:
-      - name: GitHub Pages deployen
+      - name: Deploy GitHub Pages
         uses: actions/deploy-pages@v4

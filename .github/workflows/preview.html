@@ -18,6 +18,11 @@
             border: none;
         }
     </style>
+    <script>
+        if (!navigator.pdfViewerEnabled) {
+            window.location.href = 'index.pdf';
+        }
+    </script>
 </head>
 
 <body>
