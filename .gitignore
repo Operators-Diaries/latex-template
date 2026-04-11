@@ -11,3 +11,4 @@ tstex_modules/
 *.blg
 *.pdf
 *.out
+*.toc
